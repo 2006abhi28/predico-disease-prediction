@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.http import JsonResponse
 from datetime import date
+from django.conf import settings
+import os
 
 from django.contrib import messages
 from django.contrib.auth.models import User , auth
@@ -13,7 +15,8 @@ from chats.models import Chat,Feedback
 
 #loading trained_model
 import joblib as jb
-model = jb.load('trained_model')
+model_path = os.path.join(settings.BASE_DIR, 'trained_model')
+model = jb.load(model_path)
 
 
 
