@@ -22,14 +22,8 @@ model = jb.load(model_path)
 
 
 def home(request):
-
-  if request.method == 'GET':
-        
-      if request.user.is_authenticated:
-        return render(request,'homepage/index.html')
-
-      else :
-        return render(request,'homepage/index.html')
+    # Handle both GET and POST requests by rendering the homepage
+    return render(request,'homepage/index.html')
 
 
 
