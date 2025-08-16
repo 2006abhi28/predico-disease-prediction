@@ -270,10 +270,10 @@ img{ max-width:100%;}
                    
         <div class="card-body">
           <h4 class="card-title">Predicted disease : {{consultation.diseaseinfo.diseasename}}</h4>
-          <p class="card-text">list of symptoms - 
+          <p class="card-text">list of symptoms -
 
               <ul class="list-group" >
-                {% for i in consultation.diseaseinfo.symptomsname %}
+                {% for i in consultation.diseaseinfo.symptoms_list %}
                 <li class="list-group-item" style="background-color:aliceblue">{{i}}</li>
                 {% endfor %}
               </ul>

@@ -266,7 +266,7 @@ def checkdisease(request):
         patient = puser.patient
         diseasename = predicted_disease
         no_of_symp = inputno
-        symptomsname = psymptoms
+        symptomsname = ','.join(psymptoms)  # Convert list to comma-separated string
         confidence = confidencescore
 
         diseaseinfo_new = diseaseinfo(patient=patient,diseasename=diseasename,no_of_symp=no_of_symp,symptomsname=symptomsname,confidence=confidence,consultdoctor=consultdoctor)
